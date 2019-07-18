@@ -9,17 +9,18 @@ HR analytics is revolutionising the way human resources departments operate, lea
 
 Solution :
 The training dataset and test dataset has been clubbed into a common large dataset called data.
-The columns "KPIs_met..80." and "awards_won." have been renamed and factored as "Yes"/"No" instead of numeric vector 1/0. 
+The columns "KPIs_met..80." and "awards_won." have been renamed and converted to numeric vector 1/0. 
 
-From the biplot derived from principal component test we understand that age and length_of_service are linear in behaviour followed by (average_training_score & awards_won) and  (KPIGReaterThan80perc & previous_year_rating)
+Missing or null values are imputed in variables previous_year_rating and education by the most frequently occuring data in them. 
 
-We thus perform feature engineering on the dataset viz., deriving avg_mean_score by department and region, bucketing of age column, derving start_age / joining_age and converting is_promoted variable to factor variable.
-Interaction variables were removed.
+From the biplot derived from principal component test, we understand that age and length_of_service are linear in behaviour followed by (average_training_score & awards_won) and  (KPIGReaterThan80perc & previous_year_rating)
 
-Missing or null values are imputed in variables previous_year_rating and education by the most frequently occuring data in them. We further scale the score derived from avg_mean_score by department and region.
+We thus perform feature engineering on the dataset viz., bucketing of age column, derving start_age / joining_age , deriving the total score based on previous_year_rating and KPI, and converting is_promoted variable to factor variable.
+Interaction variables are removed.
 
-It is observed that the percentage of employees promoted is less , thereby having an imbalanced dataset. To rectify this, undersampling technique is used and preferred over other sampling methods.
+It is observed that the percentage of employees promoted is less , thereby we have an imbalanced dataset. To rectify this, undersampling technique is used and preferred over other sampling methods.
 
-Logistic regression is first performed on the training dataset, from which we learn that dummy variables have to be created for the variables department,region and education to better understand its significance. The dummy variables are created for both training and testing dataset.
+One-hot encoding and scaling on train data and test is performed. Further the engineered train data is split into 80:20 ratio to apply modelling techniques.
 
-On further performing logistic regression on an 80:20 split and trimming down to significant variables, we attain an accuracy of 79.80
+Logistic regression is first performed and on trimming down to significant variables, we attain an accuracy of 79.80 with AUC of 88.15
+ 
