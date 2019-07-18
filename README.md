@@ -14,11 +14,12 @@ The columns "KPIs_met..80." and "awards_won." have been renamed and factored as 
 From the biplot derived from principal component test we understand that age and length_of_service are linear in behaviour followed by (average_training_score & awards_won) and  (KPIGReaterThan80perc & previous_year_rating)
 
 We thus perform feature engineering on the dataset viz., deriving avg_mean_score by department and region, bucketing of age column, derving start_age / joining_age and converting is_promoted variable to factor variable.
+Interaction variables were removed.
 
-Missing or null values are imputed in variables previous_year_rating and education by the mode value. We further scale the score derived from avg_mean_score by department and region.
+Missing or null values are imputed in variables previous_year_rating and education by the most frequently occuring data in them. We further scale the score derived from avg_mean_score by department and region.
 
 It is observed that the percentage of employees promoted is less , thereby having an imbalanced dataset. To rectify this, undersampling technique is used and preferred over other sampling methods.
 
 Logistic regression is first performed on the training dataset, from which we learn that dummy variables have to be created for the variables department,region and education to better understand its significance. The dummy variables are created for both training and testing dataset.
 
-On further performing logistic regression and trimming down to significant variables, we attain an accuracy of 79.80
+On further performing logistic regression on an 80:20 split and trimming down to significant variables, we attain an accuracy of 79.80
