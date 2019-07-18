@@ -1,9 +1,12 @@
-# HR-Analytics
+# HR-Analytics - WNS Analytics Hackathon
+
+Problem Statement : Can you predict which employee has a higher chance of getting promoted and help the help the organization to expedite the appraisal and promotion process?
+Link : https://datahack.analyticsvidhya.com/contest/wns-analytics-hackathon-2018-1/
 
 About the hackathon : 
 HR analytics is revolutionising the way human resources departments operate, leading to higher efficiency and better results overall. Human resources has been using analytics for years. However, the collection, processing and analysis of data has been largely manual, and given the nature of human resources dynamics and HR KPIs, the approach has been constraining HR.The task is to predict whether a potential promotee at checkpoint in the test set will be promoted or not after the evaluation process.The task is to identify the right people for promotion (only for manager position and below) and prepare them in time.
 
-  
+Solution :
 The training dataset and test dataset has been clubbed into a common large dataset called data.
 The columns "KPIs_met..80." and "awards_won." have been renamed and factored as "Yes"/"No" instead of numeric vector 1/0. 
 
