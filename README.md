@@ -1,6 +1,6 @@
 # HR-Analytics - WNS Analytics Hackathon
 
-Problem Statement : Can you predict which employee has a higher chance of getting promoted and help the help the organization to expedite the appraisal and promotion process?
+Problem Statement : Can you predict which employee has a higher chance of getting promoted and help the organization to expedite the appraisal and promotion process?
 
 Link : https://datahack.analyticsvidhya.com/contest/wns-analytics-hackathon-2018-1/
 
